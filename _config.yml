@@ -1,0 +1,41 @@
+plugins: [jekyll-paginate]
+
+permalink: /:categories/:title/
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input:  GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginate_path: "page/:num"
+baseurl: ""
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      styles : [highlight.css,gitment.css,post.css]
+      scripts : [gitment.js, post.js]
+
+title: "ApexDevForce.com"
+email: zhouhu at hotmail dot com
+description: ""
+github:
+  username: zhouhu
+swiftype:
+  searchId: JPbWRdep_zjQxkH55XKs
+gitment:
+    repo: apexdevforce
+    client_id: 414ed9e4d1a2ad5357d2
+    client_secret: df0491aec204ab67ceada12f44562256c4762659
+
+url: "https://apexdevforce.com"
+imgrepo: "https://apexdevforce.com/static/img"
+
+#url: "http://127.0.0.1:4000"
+#imgrepo: "http://127.0.0.1:4000/static/img"
