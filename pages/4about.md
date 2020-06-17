@@ -13,7 +13,7 @@ A Salesforce certified administrator, consultant and developer, who straddle the
 
 ## Salesforce Certificates
 
-- [https://trailhead.salesforce.com/credentials/verification by Name: Hu Zhou](https://trailhead.salesforce.com/credentials/certification-detail-print?searchString=ECRLwDzsRTX/Lm4iZUAFSM3vo2BQJGO8MCL56xDJONeQf3lFsLMImleTjZ5vsE/1)
+- [https://trailhead.salesforce.com/credentials/verification](https://trailhead.salesforce.com/credentials/verification)  by Name: **Hu Zhou**
 
 ## LinkedIn
 
