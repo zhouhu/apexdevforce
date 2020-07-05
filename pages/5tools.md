@@ -49,7 +49,6 @@ icon: octicon-tools
 
 ### Diff Compare
 
-- Meld
 - Beyond Compare
 
 ### Office Suit
@@ -72,11 +71,15 @@ icon: octicon-tools
 
 ### Screen-Capture
 
-- Shift-Command-4, QuickTime, Snipping Tool,  Chrome plugins: Full Page Screen Capture, Screencastify ...
+- Shift-Command-4, QuickTime, Snipping Tool, oCam,  Chrome plugins: Full Page Screen Capture, Screencastify...
 
 ### Communitcation
 
-- Email, Phone, Slack, Google Hangout Chat, MS Skype & Teams, WeChat ...
+- Email, Phone, Slack, Google Hangout Chat, MS Skype & Teams, WeChat, Zoom ...
+
+### Remote Control
+
+- Teamviewer, Real VNC
 
 ### Network Analysis
 
