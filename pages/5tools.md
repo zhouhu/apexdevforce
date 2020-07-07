@@ -43,7 +43,8 @@ icon: octicon-tools
 
 ### CI/CD
 
-- Bitbucket + Pipeline
+- Github Actions + Docker container
+- Bitbucket Pipeline + Docker container
 
 ### Project Tracking
 
