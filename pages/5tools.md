@@ -37,6 +37,8 @@ icon: octicon-tools
 ### Source Control
 
 - Git
+  - Github
+  - Bitbucket
   - Sublime Merge
 
 ### CI/CD
