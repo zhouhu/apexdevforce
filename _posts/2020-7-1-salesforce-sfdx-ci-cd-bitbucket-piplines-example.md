@@ -71,7 +71,7 @@ COPY server.key /keys
 ENTRYPOINT ["/bin/bash"]
 ```
 
-1.5 Push Docker Image to Docker Hub
+### 2.5 Push Docker Image to Docker Hub
 ```bash
   #docker push username/sfdx:latest
 ```
