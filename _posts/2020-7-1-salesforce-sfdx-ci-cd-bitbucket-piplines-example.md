@@ -7,7 +7,7 @@ categories: [Software Engineering]
 
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 
-#### 1 Virtual Machine (Optional) 
+## 1 Virtual Machine (Optional) 
 
 1.1 Install Virtual Machine on your local computer (optional, providing a safe sandbox, don't mess up with your working computer system)
 1.2 Enable virtualisation on Local Computer BIOS config
@@ -19,7 +19,7 @@ categories: [Software Engineering]
 ```  
 0.5 Install Guest Additions CD image in VM 
 
-#### 2. Docker
+## 2. Docker
 
 2.1 Create a Docker Hub User Account e.g.  username  [Docker Hub Signup](https://hub.docker.com/signup)
 2.2 Create a Repository in Docker Hub e.g. sfdx
@@ -76,7 +76,7 @@ ENTRYPOINT ["/bin/bash"]
   #docker push username/sfdx:latest
 ```
 
-#### 3. Bitbucket
+## 3. Bitbucket
 
 3.1. Create an empty project / use an exisitng project
 3.2. Add .gitignore to the Local Directory e.g.
@@ -126,7 +126,7 @@ pipelines:
            - echo "Deployment command executed to Salesforce Org - UAT"
 ```
 
-#### 4. Salesforce
+## 4. Salesforce
 
 4.1 Create a certificate
 [https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm)
@@ -134,7 +134,7 @@ pipelines:
 [https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm)
 Classic UI: Setup->Create->Apps->New Connected Apps
 
-#### 5. Local Computer
+## 5. Local Computer
 
 5.1 Download and install Git [https://git-scm.com/downloads](https://git-scm.com/downloads)
 5.2 Downlaod and install Sourcetree [https://www.sourcetreeapp.com](https://www.sourcetreeapp.com) (Bitbucket Git GUI, optional if you like command line or other Git GUI) 
@@ -143,6 +143,6 @@ Classic UI: Setup->Create->Apps->New Connected Apps
 5.5 Install Visual Studio Code Salesforce Extensions, search extension (publisher:"Salesforce") 
 (5.4 and 5.5 will provide a GUI for sfdx, it is optional if you like command line)
 
-#### 6. Setup complets, workflow starts here
+## 6. Setup complets, workflow starts here
 
 6.1 ...to be continued...
