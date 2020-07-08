@@ -9,10 +9,12 @@ categories: [Software Engineering]
 
 ## 1 Virtual Machine (Optional) 
 
-### 1.1 Install Virtual Machine on your local computer (optional, providing a safe sandbox, don't mess up with your working computer system)
+### 1.1 Install Virtual Machine on your local computer 
+(optional, providing a safe sandbox, don't mess up with your working computer system)
 ### 1.2 Enable virtualisation on Local Computer BIOS config
 ### 1.3 Install VirtualBox
-### 1.4 Create a new VirtualMachine, Debian 64bit, latest stable version
+### 1.4 Create a new VirtualMachine
+Debian 64bit, latest stable version
 ### 1.5 update VM OS to lates
 ```bash
   # sudo apt-get update && apt-get upgrade
@@ -21,9 +23,12 @@ categories: [Software Engineering]
 
 ## 2. Docker
 
-### 2.1 Create a Docker Hub User Account e.g.  username  [Docker Hub Signup](https://hub.docker.com/signup)
-### 2.2 Create a Repository in Docker Hub e.g. sfdx
-### 2.3 Install "docker" command in VM [Docker Doc for Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
+### 2.1 Create a Docker Hub User Account 
+e.g.  username  [Docker Hub Signup](https://hub.docker.com/signup)
+### 2.2 Create a Repository in Docker Hub 
+e.g. sfdx
+### 2.3 Install "docker" command in VM 
+[Docker Doc for Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 ### 2.4 Create a Docker Image from Dockerfile
 ```bash
   #mkdir DockerHub
@@ -136,12 +141,16 @@ Classic UI: Setup->Create->Apps->New Connected Apps
 
 ## 5. Local Computer
 
-### 5.1 Download and install Git [https://git-scm.com/downloads](https://git-scm.com/downloads)
-### 5.2 Downlaod and install Sourcetree [https://www.sourcetreeapp.com](https://www.sourcetreeapp.com) (Bitbucket Git GUI, optional if you like command line or other Git GUI) 
-### 5.3 Download and install sfdx [https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
-### 5.4 Download and install Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/) 
+### 5.1 Download and install Git 
+[https://git-scm.com/downloads](https://git-scm.com/downloads)
+### 5.2 Downlaod and install Sourcetree 
+[https://www.sourcetreeapp.com](https://www.sourcetreeapp.com) (Bitbucket Git GUI, optional if you like command line or other Git GUI) 
+### 5.3 Download and install sfdx 
+[https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
+### 5.4 Download and install Visual Studio Code 
+[https://code.visualstudio.com/](https://code.visualstudio.com/) 
 ### 5.5 Install Visual Studio Code Salesforce Extensions, search extension (publisher:"Salesforce") 
-#### (5.4 and 5.5 will provide a GUI for sfdx, it is optional if you like command line)
+(5.4 and 5.5 will provide a GUI for sfdx, it is optional if you like command line)
 
 ## 6. Setup complets, workflow starts here
 
