@@ -7,31 +7,31 @@ categories: [Software Engineering]
 
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 
-#### 0 Virtual Machine (Optional) 
+#### 1 Virtual Machine (Optional) 
 
-0.0 Install Virtual Machine on your local computer (optional, providing a safe sandbox, don't mess up with your working computer system)
-0.1 Enable virtualisation on Local Computer BIOS config
-0.2 Install VirtualBox
-0.3 Create a new VirtualMachine, Debian 64bit, latest stable version
-0.4 update VM OS to lates
+1.1 Install Virtual Machine on your local computer (optional, providing a safe sandbox, don't mess up with your working computer system)
+1.2 Enable virtualisation on Local Computer BIOS config
+1.3 Install VirtualBox
+1.4 Create a new VirtualMachine, Debian 64bit, latest stable version
+1.5 update VM OS to lates
 ```bash
   # sudo apt-get update && apt-get upgrade
 ```  
 0.5 Install Guest Additions CD image in VM 
 
-#### 1. Docker
+#### 2. Docker
 
-1.1 Create a Docker Hub User Account e.g.  username  [Docker Hub Signup](https://hub.docker.com/signup)
-1.2 Create a Repository in Docker Hub e.g. sfdx
-1.3 Install "docker" command in VM [Docker Doc for Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
-1.4 Create a Docker Image from Dockerfile
+2.1 Create a Docker Hub User Account e.g.  username  [Docker Hub Signup](https://hub.docker.com/signup)
+2.2 Create a Repository in Docker Hub e.g. sfdx
+2.3 Install "docker" command in VM [Docker Doc for Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
+2.4 Create a Docker Image from Dockerfile
 ```bash
   #mkdir DockerHub
   #cd DockerHub
   #vi Dockerfile (example)
   #docker build --no-cache -t username/sfdx .
 ```  
-1.4.1 Dockerfile Example
+2.4.1 Dockerfile Example
 ```
 FROM debian:stable-slim as build
 
@@ -76,18 +76,18 @@ ENTRYPOINT ["/bin/bash"]
   #docker push username/sfdx:latest
 ```
 
-#### 2. Bitbucket
+#### 3. Bitbucket
 
-2.1. Create an empty project / use an exisitng project
-2.2. Add .gitignore to the Local Directory e.g.
+3.1. Create an empty project / use an exisitng project
+3.2. Add .gitignore to the Local Directory e.g.
 ```
 	/.sfdx
 	/.vscode
 	/force-app/main/default/lwc/
 ```  
-2.3. Enable repository Bitbucket Pipeline
-2.4. Add repository variables to the Pipeline [https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/#User-defined-variables](https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/#User-defined-variables)
-2.5. Modify the auto-created "bitbucket-pipelines.yml"
+3.3. Enable repository Bitbucket Pipeline
+3.4. Add repository variables to the Pipeline [https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/#User-defined-variables](https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/#User-defined-variables)
+3.5. Modify the auto-created "bitbucket-pipelines.yml"
 ```yaml
 image:
   name: username/sfdx:latest
@@ -126,23 +126,23 @@ pipelines:
            - echo "Deployment command executed to Salesforce Org - UAT"
 ```
 
-#### 3. Salesforce
+#### 4. Salesforce
 
-3.1 Create a certificate
+4.1 Create a certificate
 [https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm)
-3.2 Create a connected app
+4.2 Create a connected app
 [https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm)
 Classic UI: Setup->Create->Apps->New Connected Apps
 
-#### 4. Local Computer
+#### 5. Local Computer
 
-4.1 Download and install Git [https://git-scm.com/downloads](https://git-scm.com/downloads)
-4.2 Downlaod and install Sourcetree [https://www.sourcetreeapp.com](https://www.sourcetreeapp.com) (Bitbucket Git GUI, optional if you like command line or other Git GUI) 
-4.3 Download and install sfdx [https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
-4.4 Download and install Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/) 
-4.5 Install Visual Studio Code Salesforce Extensions, search extension (publisher:"Salesforce") 
-(4.4 and 4.5 will provide a GUI for sfdx, it is optional if you like command line)
+5.1 Download and install Git [https://git-scm.com/downloads](https://git-scm.com/downloads)
+5.2 Downlaod and install Sourcetree [https://www.sourcetreeapp.com](https://www.sourcetreeapp.com) (Bitbucket Git GUI, optional if you like command line or other Git GUI) 
+5.3 Download and install sfdx [https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
+5.4 Download and install Visual Studio Code [https://code.visualstudio.com/](https://code.visualstudio.com/) 
+5.5 Install Visual Studio Code Salesforce Extensions, search extension (publisher:"Salesforce") 
+(5.4 and 5.5 will provide a GUI for sfdx, it is optional if you like command line)
 
-#### 5. Setup complets, workflow starts here
+#### 6. Setup complets, workflow starts here
 
-5.1 ...to be continued...
+6.1 ...to be continued...
