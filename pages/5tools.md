@@ -71,10 +71,13 @@ icon: octicon-tools
 ### Color Picker
 
 - ColorCop (Windows only)
+- Digital Colour Meter (macOS only)
 
 ### Screen-Capture
 
-- Shift-Command-4, QuickTime, Snipping Tool, oCam,  Chrome plugins: Full Page Screen Capture, Screencastify...
+- macOS: Shift+Command+4, QuickTime
+- Windows: Win+Shift+S, oCam
+- Chrome plugins: Full Page Screen Capture, Screencastify...
 
 ### Communitcation
 
