@@ -2,7 +2,7 @@
 layout: post
 title: Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 tags: [SFDX, Bitbucket Pipelines, Docker Container, CI/CD]
-categories: [SoftwareEngineering]
+categories: [Software-Engineering]
 ---
 
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
