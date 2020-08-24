@@ -3413,17 +3413,6 @@ var Gitment =
                     }, options);
 
                     this.state.user.isLoggingIn = true;
-                    _utils.http.post('https://auth.baixiaotu.cc', {
-                        code: code,
-                        client_id: client_id,
-                        client_secret: client_secret
-                    }, '').then(function (data) {
-                        _this.accessToken = data.access_token;
-                        _this.update();
-                    }).catch(function (e) {
-                        _this.state.user.isLoggingIn = false;
-                        alert(e);
-                    });
                 } else {
                     this.update();
                 }
