@@ -35,7 +35,7 @@ A Salesforce certified administrator, consultant and developer, who straddle the
 
 ### System Integration
 
-- SOAP, REST, Authentication, Security...
+- SOAP, REST, SSO, Security...
   
 ### Salesforce
 
