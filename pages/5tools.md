@@ -29,8 +29,9 @@ icon: octicon-tools
 
 ### Text Editor
 
+- Sublim Text
 - VS Code
-  - files.autoSave: onFocusChange
+	- files.autoSave: onFocusChange
   - files.hotExit: onExitAndWindowClose (cmd + q)
   - window.openFoldersInNewWindow: on
 
