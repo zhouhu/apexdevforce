@@ -55,7 +55,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 - Click Pipeline on repo sidebar menu
 - Select the default **Starter** pipeline
 - Replace the **bitbucket-pipelines.yml** content with the following example
-```
+```bash
 image:
   name: salesforce/salesforcedx:7.75.1-slim
 
