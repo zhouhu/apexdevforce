@@ -55,7 +55,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 - Click Pipeline on repo sidebar menu
 - Select the default **Starter** pipeline
 - Replace the **bitbucket-pipelines.yml** content with the following example
-```bash
+<pre>
 image:
   name: salesforce/salesforcedx:7.75.1-slim
 
@@ -75,7 +75,7 @@ pipelines:
            - sfdx force:auth:jwt:grant -f server.key -i $SFDC_CONSUMER_KEY -u $SFDC_USER -d -s -r $SFDC_URL
            - sfdx force:source:deploy -x $MANIFEST_PACKAGE_PATH -l RunSpecifiedTests -r $TEST_CLASSES_1
 
-```
+</pre>
 - The example will work when changes committed to the git repo branch named “uat” i.e. the CI/CD will automatically run when someone pull-request and merge changes to the uat branch. 
 - You can change the branch name to suit your project settings.
 - You can add more branches to deploy different branches to different deployment target orgs, in this case you will need to set up Connect Apps in each deployment target orgs.
