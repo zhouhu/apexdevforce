@@ -8,12 +8,19 @@ categories: [Software-Engineering]
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 
 1. Prerequisites - environment and tools 
+
 - Command Line on an OS MacOS / Linux / Windows
+
 - Web Browser
+
 - OpenSSL - OOTB in MacOS and Linux. Windows: https://www.openssl.org/
+
 - Salesforce Deployment Traget Org with Admin User Access
+
 - SFDX CLI - https://developer.salesforce.com/tools/sfdxcli
+
 - Bitbucket Pipeline - bitbucket user account with repo admin permission
+
 - Git - https://git-scm.com/ 
 
 2. OpenSSL - crete a private key and self-sighned digital certificate
@@ -39,7 +46,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
     - Access and manage your data (api)
     - Perform requests on your behalf at any time (refresh_token, offline_access)
     - Provide access to your data via the Web (web)
-    
+
 - Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm
 
 4. Salesforce Org - OAuth from browser to the deployment target org
