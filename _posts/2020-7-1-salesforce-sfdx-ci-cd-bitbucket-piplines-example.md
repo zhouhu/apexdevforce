@@ -8,13 +8,13 @@ categories: [Software-Engineering]
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 
 1. Prerequisites - environment and tools 
-- 1.1 Command Line on an OS MacOS / Linux / Windows
-- 1.2 Web Browser
-- 1.3 OpenSSL - OOTB in MacOS and Linux. Windows: https://www.openssl.org/
-- 1.4 Salesforce Deployment Traget Org with Admin User Access
-- 1.5 SFDX CLI - https://developer.salesforce.com/tools/sfdxcli
-- 1.6 Bitbucket Pipeline - bitbucket user account with repo admin permission
-- 1.7 Git - https://git-scm.com/ 
+- Command Line on an OS MacOS / Linux / Windows
+- Web Browser
+- OpenSSL - OOTB in MacOS and Linux. Windows: https://www.openssl.org/
+- Salesforce Deployment Traget Org with Admin User Access
+- SFDX CLI - https://developer.salesforce.com/tools/sfdxcli
+- Bitbucket Pipeline - bitbucket user account with repo admin permission
+- Git - https://git-scm.com/ 
 
 2. OpenSSL - crete a private key and self-sighned digital certificate
 - Run the following Commands in a folder, e.g. a folder named "my_ssh_keys" on Desktop
@@ -25,7 +25,7 @@ openssl rsa -passin pass:x -in server.pass.key -out server.key
 openssl req -new -key server.key -out server.csr
 openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
 ```
-### Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm 
+- Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm 
 
 3. Salesforce Org - create a Connect App on deployment target org
 - Classic UI: Setup -> Build -> Create -> Apps -> New Connected Apps -> New
