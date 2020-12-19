@@ -59,25 +59,24 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 - Replace the **bitbucket-pipelines.yml** content with the following example.
 
 <pre>
-  image:
-    name: salesforce/salesforcedx:7.75.1-slim
+image:
+  name: salesforce/salesforcedx:7.75.1-slim
 
-  pipelines:
-    default:
-      - step:
-          script:
-            - echo "Commited changes to a branch that does not match the listed branches in bitbucket-pipelines.yml."
-            - echo "You can skip running pipline by adding [skip ci] or [ci skip] (with []) to the git commit message."
-            - sfdx --version
-            - sfdx plugins --core
-    branches:
-      uat:
-       - step:
-           script:
-             - sfdx --version
-             - sfdx force:auth:jwt:grant -f server.key -i $SFDC_CONSUMER_KEY -u $SFDC_USER -d -s -r $SFDC_URL
-             - sfdx force:source:deploy -x $MANIFEST_PACKAGE_PATH -l RunSpecifiedTests -r $TEST_CLASSES_1
-
+pipelines:
+  default:
+    - step:
+        script:
+          - echo "Commited changes to a branch that does not match the listed branches in bitbucket-pipelines.yml."
+          - echo "You can skip running pipline by adding [skip ci] or [ci skip] (with []) to the git commit message."
+          - sfdx --version
+          - sfdx plugins --core
+  branches:
+    uat:
+     - step:
+         script:
+           - sfdx --version
+           - sfdx force:auth:jwt:grant -f server.key -i $SFDC_CONSUMER_KEY -u $SFDC_USER -d -s -r $SFDC_URL
+           - sfdx force:source:deploy -x $MANIFEST_PACKAGE_PATH -l RunSpecifiedTests -r $TEST_CLASSES_1
 </pre>
 
 - The example will work when changes committed to the git repo branch named “uat” i.e. the CI/CD will automatically run when someone pull-request and merge changes to the uat branch. 
