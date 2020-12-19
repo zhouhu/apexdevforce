@@ -7,7 +7,7 @@ categories: [Software-Engineering]
 
 # Salesforce SFDX CI/CD - Bitbucket Pipelines Example
 
-### 1 Prerequisites - environment and tools 
+### 1. Prerequisites - environment and tools 
 
 - Command Line on an OS MacOS / Linux / Windows
 - Web Browser
@@ -17,7 +17,7 @@ categories: [Software-Engineering]
 - Bitbucket Pipeline - bitbucket user account with repo admin permission
 - Git - https://git-scm.com/ 
 
-### 2 OpenSSL - crete a private key and self-sighned digital certificate
+### 2. OpenSSL - crete a private key and self-sighned digital certificate
 
 - Run the following Commands in a folder, e.g. a folder named "my_ssh_keys" on Desktop
 ```bash
@@ -29,7 +29,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 ```
 - Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm 
 
-### 3 Salesforce Org - create a Connect App on deployment target org
+### 3. Salesforce Org - create a Connect App on deployment target org
 - Classic UI: Setup -> Build -> Create -> Apps -> New Connected Apps -> New
 - Lightning: Setup -> PLATFORM TOOLS -> Apps -> App Manager -> New Connected App
 - Connect App Name: e.g. My CICD
@@ -43,7 +43,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
     - Provide access to your data via the Web (web)
 - Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm
 
-### 4 Salesforce Org - OAuth from browser to the deployment target org
+### 4. Salesforce Org - OAuth from browser to the deployment target org
 - Allow from 2-10 minutes for your changes to take effect on the server before using the connected app.
 - Open browser, past the following address to login to the Salesforce deployment target org
   - https://<org-custome-domain>.my.salesforce.com/services/oauth2/authorize?client_id=<consumer_key>&redirect_uri=http://localhost:1717/OauthRedirect&response_type=code
@@ -53,7 +53,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
   - After login and authroize, the browser will be redirected to http://localhost:1717/OauthRedirect, just ignore and close the browser tab.
 
 
-### 5 Bitbucket Pipeline - enable pipline
+### 5. Bitbucket Pipeline - enable pipline
 - Click Pipeline on repo sidebar menu
 - Select the default **Starter** pipeline
 - Replace the **bitbucket-pipelines.yml** content with the following example.
@@ -84,7 +84,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 - You can change the branch name to suit your project settings.
 - You can add more branches to deploy different branches to different deployment target orgs, in this case you will need to set up Connect Apps in each deployment target orgs.
 
-### 6 Bitbucket Pipeline - repository variables
+### 6. Bitbucket Pipeline - repository variables
 - The example in step 5 need following variables to be set up in the repository.
 - Repository sidebar -> Repository settings -> PIPELINES > Repository Variables: Add new Name and Value pairs
   - SFDC_CONSUMER_KEY : the consumer key from the newly created Salesforce Connect App
@@ -93,11 +93,11 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
   - TEST_CLASSES_1 : list of comma separated unit test class names, e.g. MyClassTest,YourClassTest
   - MANIFEST_PACKAGE_PATH : manifest/release_package.xml
 
-### 7 Bitbucket Pipeline - running CI/CD
+### 7. Bitbucket Pipeline - running CI/CD
 - In the example bitbucket-pipelines.yml the configuration is based on a branch named: **uat**
 - Create a branch in the repository, name it as **uat**
 - Commit the bitbucket-pipelines.yml and the **server.key** (created by OpenSSL in the step 1) to the **uat** branch.
 - Create the release_package.xml and commit it along with the metadata files that listed in the it to the uat branch, your pipeline should have started automatically.
 - Don’t forget to update the Test Classes in the Repository variables. In the example the variable name is **TEST_CLASSES_1**
 
-### 8 Good luck! 8 is a lucky number in Chinese culture, which means get **rich** :)
+### 8. Good luck! 8 is a lucky number in Chinese culture, which means get **rich** :)
