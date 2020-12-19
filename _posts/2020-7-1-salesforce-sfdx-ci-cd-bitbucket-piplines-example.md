@@ -39,6 +39,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
     - Access and manage your data (api)
     - Perform requests on your behalf at any time (refresh_token, offline_access)
     - Provide access to your data via the Web (web)
+    
 - Reference: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm
 
 4. Salesforce Org - OAuth from browser to the deployment target org
