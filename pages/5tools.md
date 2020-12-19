@@ -29,7 +29,7 @@ icon: octicon-tools
 
 ### Text Editor
 
-- Sublim Text
+- Sublime Text
 - VS Code
 	- files.autoSave: onFocusChange
   - files.hotExit: onExitAndWindowClose (cmd + q)
