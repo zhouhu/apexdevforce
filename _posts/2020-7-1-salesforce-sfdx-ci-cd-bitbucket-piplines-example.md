@@ -21,7 +21,7 @@ categories: [Software-Engineering]
 
 - Run the following Commands in a folder, e.g. a folder named "my_ssh_keys" on Desktop
 ```bash
-cd Desktop/my_ssh_keys
+cd ~/Desktop/my_ssh_keys
 openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
 openssl rsa -passin pass:x -in server.pass.key -out server.key
 openssl req -new -key server.key -out server.csr
