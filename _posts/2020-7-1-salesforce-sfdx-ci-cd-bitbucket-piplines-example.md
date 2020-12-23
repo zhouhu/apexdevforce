@@ -71,7 +71,7 @@ pipelines:
           - sfdx --version
           - sfdx plugins --core
   branches:
-    uat:
+    qa:
      - step:
          script:
            - sfdx --version
@@ -79,7 +79,7 @@ pipelines:
            - sfdx force:source:deploy -x $MANIFEST_PACKAGE_PATH -l RunSpecifiedTests -r $TEST_CLASSES_1
 </pre>
 
-- The example will work when changes committed to the git repo branch named “uat” i.e. the CI/CD will automatically run when someone pull-request and merge changes to the uat branch. 
+- The example will work when changes committed to the git repo branch named **qa** i.e. the CI/CD will automatically run when someone pull-request and merge changes to the **qa** branch. 
 - You can change the branch name to suit your project settings.
 - You can add more branches to deploy different branches to different deployment target orgs, in this case you will need to set up Connect Apps in each deployment target orgs.
 
@@ -93,10 +93,10 @@ pipelines:
   - MANIFEST_PACKAGE_PATH : manifest/release_package.xml
 
 ### 7. Bitbucket Pipeline - running CI/CD
-- In the example bitbucket-pipelines.yml the configuration is based on a branch named: **uat**
-- Create a branch in the repository, name it as **uat**
-- Commit the bitbucket-pipelines.yml and the **server.key** (created by OpenSSL in the step 1) to the **uat** branch.
-- Create the release_package.xml and commit it along with the metadata files that listed in the it to the uat branch, your pipeline should have started automatically.
+- In the example bitbucket-pipelines.yml the configuration is based on a branch named: **qa**
+- Create a branch in the repository, name it as **qa**
+- Commit the bitbucket-pipelines.yml and the **server.key** (created by OpenSSL in the step 1) to the **qa** branch.
+- Create the release_package.xml and commit it along with the metadata files that listed in it to the **qa** branch, your pipeline should have started automatically.
 - Don’t forget to update the Test Classes in the Repository variables. In the example the variable name is **TEST_CLASSES_1**
 
 ### 8. Good luck! 8 is a lucky number in Chinese culture, which means get **rich** :)
