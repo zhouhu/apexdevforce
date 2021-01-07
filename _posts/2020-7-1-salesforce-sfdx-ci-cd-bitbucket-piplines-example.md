@@ -46,7 +46,7 @@ openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out serv
 ### 4. Salesforce Org - OAuth from browser to the deployment target org
 - Allow from 2-10 minutes for your changes to take effect on the server before using the connected app.
 - Open browser, past the following address to login to the Salesforce deployment target org
-  - https://**org-custome-domain**.my.salesforce.com/services/oauth2/authorize?client_id=**consumer_key**&redirect_uri=http://localhost:1717/OauthRedirect&response_type=code
+  - https://**org-custom-domain**.my.salesforce.com/services/oauth2/authorize?client_id=**consumer_key**&redirect_uri=http://localhost:1717/OauthRedirect&response_type=code
 - Replace **org-custom-domain** with the deployment target custom domain
 - Replace **consumer_key** with the connect app's consumer key
 - Login and Authorize (here the login user will be used as the pipeline Salesforce login user)
