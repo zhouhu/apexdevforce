@@ -69,11 +69,6 @@ icon: octicon-tools
 - draw.io
 - yEd Graph Editor
 
-### Color Picker
-
-- ColorCop (Windows only)
-- Digital Colour Meter (macOS only)
-
 ### Screen-Capture
 
 - macOS: Shift+Command+4, QuickTime
