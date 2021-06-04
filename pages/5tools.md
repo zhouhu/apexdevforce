@@ -73,7 +73,7 @@ icon: octicon-tools
 
 - macOS: Shift+Command+4, QuickTime
 - Windows: Win+Shift+S, oCam
-- [OBS Studio](https://obsproject.com/)
+- <a href="https://obsproject.com/" target="_blank">OBS Studio</a>
 - Chrome plugins: Full Page Screen Capture, Screencastify...
 
 ### Communitcation
